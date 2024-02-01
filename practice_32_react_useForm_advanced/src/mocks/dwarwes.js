@@ -1,23 +1,23 @@
 const torinTroop = [
   {
-    name: 'Balin',
-    weapon: 'Axe',
-    age: 324
+    dwarfName: 'Balin',
+    dwarfWeapon: 'Axe',
+    dwarfEmail: 324,
   },
   {
-    name: 'Dvalin',
-    weapon: 'Axe, Axe',
-    age: 299
+    dwarfName: 'Dvalin',
+    dwarfWeapon: 'Axe, Axe',
+    dwarfEmail: 299,
   },
   {
-    name: 'Nori',
-    weapon: 'Hammer',
-    age: 387
-  }
+    dwarfName: 'Nori',
+    dwarfWeapon: 'Hammer',
+    dwarfEmail: 387,
+  },
 ];
 
-export const requestDwarwesList = () => {
-  return new Promise( (resolve, reject) => {
-    setTimeout(() => resolve(torinTroop), 1500);
+export const requestDwarwesList = (setDwarves) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => setDwarves(torinTroop), 1500);
   });
-}
+};
